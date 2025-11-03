@@ -29,10 +29,10 @@
             <div class="navbar-end">
                 <a class="navbar-item {% if page.layout == 'default' %}is-active{% endif %}"
                     href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">HOME</a>
-                <a class="navbar-item" href="/#about">ABOUT</a>
-                <a class="navbar-item" href="/#services">SERVICES</a>
+                <a class="navbar-item" href="{% if page.layout == 'default' %}/#about{% else %}{{site.url}}{{site.baseurl}}/#about{% endif %}">ABOUT</a>
+                <a class="navbar-item" href="{% if page.layout == 'default' %}/#services{% else %}{{site.url}}{{site.baseurl}}/#services{% endif %}">SERVICES</a>
                 <a class="navbar-item {% if page.layout == 'blog' %}is-active{% endif %}"
-                    href="/blog">WRITING</a>
+                    href="{{site.url}}{{site.baseurl}}/blog">WRITING</a>
                 <!-- <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/project">PROJECTS</a> -->
             </div>
 
