@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     const jsString = `
+
 function main(jsString) {
     let latestJSCharIndex = 0;
     const jsArray = jsString.split('')
     var hero = document.getElementById('hero-background')
     const revealFunction = function(col) {
-         const jsChar = jsArray[latestJSCharIndex++ % jsArray.length];
+        const jsChar = jsArray[latestJSCharIndex++ % jsArray.length];
         col.innerHTML = jsChar
     }
     const gridElements = [];
@@ -37,6 +38,7 @@ function main(jsString) {
         colElement.classList = 'grid-element'
         colElement.onmouseenter = () => revealFunction(col)
         colElement.ontouchstart = () => revealFunction(col)
+        colElement.ontouchmove = () => revealFunction(col)
         rowElement.appendChild(colElement)
        }
        animatedGridContainer.appendChild(rowElement)
@@ -83,6 +85,7 @@ function main(jsString) {
         colElement.classList = 'grid-element'
         colElement.onmouseenter = () => revealFunction(col)
         colElement.ontouchstart = () => revealFunction(col)
+        colElement.ontouchmove = () => revealFunction(col)
         rowElement.appendChild(colElement)
        }
        animatedGridContainer.appendChild(rowElement)
