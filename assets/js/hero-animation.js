@@ -1,4 +1,4 @@
-(function() {
+document.addEventListener("DOMContentLoaded", function() {
     const jsString = `
 function main(jsString) {
     let latestJSCharIndex = 0;
@@ -44,7 +44,7 @@ function main(jsString) {
 }
     `.replace(/\s\s+/g, ' ')
     main(jsString)
-})();
+});
 
 function main(jsString) {
     let latestJSCharIndex = 0;
