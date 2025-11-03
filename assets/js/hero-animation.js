@@ -37,8 +37,6 @@ function main(jsString) {
         const colElement = document.createElement('div')
         colElement.classList = 'grid-element'
         colElement.onmouseenter = () => revealFunction(col)
-        colElement.ontouchstart = () => revealFunction(col)
-        colElement.ontouchmove = () => revealFunction(col)
         rowElement.appendChild(colElement)
        }
        animatedGridContainer.appendChild(rowElement)
@@ -84,8 +82,6 @@ function main(jsString) {
         const colElement = document.createElement('div')
         colElement.classList = 'grid-element'
         colElement.onmouseenter = () => revealFunction(col)
-        colElement.ontouchstart = () => revealFunction(col)
-        colElement.ontouchmove = () => revealFunction(col)
         rowElement.appendChild(colElement)
        }
        animatedGridContainer.appendChild(rowElement)
