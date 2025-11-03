@@ -1,0 +1,83 @@
+# WhatATheme
+markdown: kramdown
+
+# URL of the Site
+url: 'jackvcurtis.github.io'
+# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
+baseurl: 
+
+# Title of the Site
+title: Jack V. Curtis
+# Description of the Site
+description: Freelance Software Engineer
+
+# Keywords of the Site
+site-keywords: 
+# URL for the Image of custom Favicon
+favicon-url: 
+
+# Social Media and Contact
+# If you don't want to use any icon, you can leave them blank.
+email: jack@jackvcurtis.com
+linkedin_username: JackVCurtis
+github_username:  JackVCurtis
+
+# Google Analytics ID (optional)
+google-analytics: UA-163806439-1
+
+
+# Name of the Author
+author-name: Jack V. Curtis
+# URL for the Image of the Author
+author-image: /assets/images/me.png
+# 60 Words About the Author
+author-about: I'm a full-stack web developer with more than a decade in Typescript on both server, browser, and mobile. I'm a programming language polyglot who also has 5+ years with Rails and Java/Kotlin for web development. I am well-versed enough in LLMs as both coding assistant and app enhancement to be skeptical but optimistic. I'm also fluent in dApp development, and focused on fast, efficient solutions to business problems.
+# URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
+author-url: https://github.com/JackVCurtis
+
+# SASS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Build settings
+plugins:
+  - jekyll-admin
+  - jekyll-feed
+
+# Permalink
+permalink: "blog/:title"
+
+# Compress
+compress_html:
+  clippings: all
+
+# Defaults
+defaults:
+  -
+    scope:
+      type: 'posts'
+    values:
+      layout: post
+      post-image: ""
+      description: ""
+      tags:
+        - ""
+  -
+    scope:
+      type: 'pages'
+    values:
+      layout: page
+
+# Exclude
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
