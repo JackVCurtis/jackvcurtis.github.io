@@ -3,7 +3,6 @@ title: "From the Gnarchives: Passkey Authentication in Rails 7"
 layout: post
 post-image: "https://cdn.prod.website-files.com/67b3331ee7aac215ec611841/67e22256ada589619fdaad01_Passkey-authentication-in-a-rails-7-application-blog.webp"
 description: A technical guide to integrating passkeys for passwordless authentication with Bitwarden's API in Ruby on Rails
-url: /blog/passkey-authentication-rails
 tags:
 - passkeys
 - rails
