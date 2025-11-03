@@ -4,7 +4,7 @@
         <!-- logo or branding image on left side -->
         <div class="navbar-brand">
             <a class="navbar-item"
-                href="{% if page.layout == 'default' %}/#{% else %}{{site.url | absolute_url}}{{site.baseurl}}/{% endif %}">
+                href="{% if page.layout == 'default' %}/#{% else %}https://{{site.url}}{{site.baseurl}}/{% endif %}">
                 <strong>{{site.title}}</strong>
             </a>
             {% unless site.linkedin_username ==  %}
@@ -28,11 +28,11 @@
             <!-- navbar items | right side -->
             <div class="navbar-end">
                 <a class="navbar-item {% if page.layout == 'default' %}is-active{% endif %}"
-                    href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url | absolute_url}}{{site.baseurl}}/{% endif %}">HOME</a>
-                <a class="navbar-item" href="{% if page.layout == 'default' %}/#about{% else %}{{site.url | absolute_url}}{{site.baseurl}}/#about{% endif %}">ABOUT</a>
-                <a class="navbar-item" href="{% if page.layout == 'default' %}/#services{% else %}{{site.url | absolute_url}}{{site.baseurl}}/#services{% endif %}">SERVICES</a>
+                    href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}https://{{site.url}}{{site.baseurl}}/{% endif %}">HOME</a>
+                <a class="navbar-item" href="{% if page.layout == 'default' %}/#about{% else %}https://{{site.url}}{{site.baseurl}}/#about{% endif %}">ABOUT</a>
+                <a class="navbar-item" href="{% if page.layout == 'default' %}/#services{% else %https://{{site.url}}{{site.baseurl}}/#services{% endif %}">SERVICES</a>
                 <a class="navbar-item {% if page.layout == 'blog' %}is-active{% endif %}"
-                    href="{{site.url | absolute_url }}{{site.baseurl}}/blog">WRITING</a>
+                    href="https://{{site.url }}{{site.baseurl}}/blog">WRITING</a>
                 <!-- <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/project">PROJECTS</a> -->
             </div>
 
