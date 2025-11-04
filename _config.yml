@@ -2,9 +2,9 @@
 markdown: kramdown
 
 # URL of the Site
-url: 'www.jackvcurtis.com'
+url: "www.jackvcurtis.com"
 # Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: ''
+baseurl: ""
 
 # Title of the Site
 title: Jack V. Curtis
@@ -12,19 +12,23 @@ title: Jack V. Curtis
 description: Freelance Software Engineer
 
 # Keywords of the Site
-site-keywords: 
+site-keywords: consultant
+  software
+  engineer
+  web
+  mobile
+  web3
 # URL for the Image of custom Favicon
-favicon-url: 
+favicon-url:
 
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
 email: jack@jackvcurtis.com
 linkedin_username: JackVCurtis
-github_username:  JackVCurtis
+github_username: JackVCurtis
 
 # Google Analytics ID (optional)
 google-analytics: UA-163806439-1
-
 
 # Name of the Author
 author-name: Jack V. Curtis
@@ -54,18 +58,16 @@ compress_html:
 
 # Defaults
 defaults:
-  -
-    scope:
-      type: 'posts'
+  - scope:
+      type: "posts"
     values:
       layout: post
       post-image: ""
       description: ""
       tags:
         - ""
-  -
-    scope:
-      type: 'pages'
+  - scope:
+      type: "pages"
     values:
       layout: page
 
