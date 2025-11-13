@@ -10,34 +10,16 @@ async function main() {
         const jsChar = jsArray[latestJSCharIndex++ % jsArray.length];
         col.innerHTML = jsChar
     }
-    let startTouchEl = null
-    let endTouchEl = null
-    const markStartTouch = function(col) {
-        startTouchEl = col
-    }
-    const markEndTouch = function(col, gridElements) {
-        const endXIndex = col.gridIndices.xIndex
-        const endYIndex = col.gridIndices.yIndex
-        const startXIndex = startTouchEl.gridIndices.xIndex
-        const startYIndex = startTouchEl.gridIndices.yIndex
 
-        const xMin = Math.min(startXIndex, endXIndex)
-        const xMax = Math.max(startXIndex, endXIndex)
-
-        const yMin = Math.min(startYIndex, endYIndex)
-        const yMax = Math.max(startYIndex, endYIndex)
-
-        for (let y = yMin; y <= yMax; y++) {
-            for (let x = xMin; x <= xMax; x++) {
-                const col = gridElements[y][x];
-                revealFunction(col)
-            }
-        }
-        startTouchEl = null
-        endTouchEl = null
+    const handleTouchMove = function(event) {
+        const x = event.touches[0].clientX;
+        const y = event.touches[0].clientY;
+        const animatedColElement = document.elementFromPoint(x, y)
+        animatedColElement.revealFunction()
     }
 
     const gridElements = [];
+
     for (let i = 0; i < 128; i++) {
         const gridRow = [];
         for (let j = 0; j < 256; j++) {
@@ -64,10 +46,9 @@ async function main() {
        for (let col of row) {
             const colElement = document.createElement('div')
             colElement.classList = 'grid-element'
-            col.gridIndices = { xIndex: row.indexOf(col), yIndex: gridElements.indexOf(row) }
+            colElement.revealFunction = () => revealFunction(col)
             colElement.onmouseenter = () => revealFunction(col)
-            colElement.ontouchstart = () => markStartTouch(col)
-            colElement.ontouchend = () => markEndTouch(col, gridElements)
+            colElement.ontouchmove = (event) => handleTouchMove(event, gridElements)
             rowElement.appendChild(colElement)
        }
        animatedGridContainer.appendChild(rowElement)

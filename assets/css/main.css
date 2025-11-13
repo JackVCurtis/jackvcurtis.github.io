@@ -137,7 +137,8 @@ a.navbar-item.is-active:hover {
 
 .hero-background>.grid-row>.grid-element {
     color: #fff;
-    width: 30px;
+    width: 32px;
+    min-width: 2rem;
     height: 15px;
 }
 
@@ -158,7 +159,8 @@ a.navbar-item.is-active:hover {
 }
 
 .hero-animated-grid>.grid-row>.grid-element {
-    width: 30px;
+    width: 32px;
+    min-width: 2rem;
     height: 15px;
 }
 
